@@ -256,6 +256,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built with ❤️ and ☕ by [Your Name]
+Built with ❤️ and ☕ by XclusiveCyberDev
 
 **Note**: Remember to customize all placeholder content (your-username, your-email, etc.) with your actual information!
