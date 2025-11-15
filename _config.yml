@@ -1,0 +1,64 @@
+# Site settings
+title: Cybersecurity Portfolio
+description: Professional portfolio showcasing cybersecurity expertise, projects, and technical writeups
+author: Your Name
+email: your.email@example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Social links
+github_username: your-github-username
+linkedin_username: your-linkedin-username
+twitter_username: your-twitter-username
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  certifications:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Security headers (for GitHub Pages configuration)
+webrick:
+  headers:
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: "1; mode=block"
+    Referrer-Policy: strict-origin-when-cross-origin
+    Permissions-Policy: "geolocation=(), microphone=(), camera=()"

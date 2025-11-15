@@ -1,0 +1,77 @@
+---
+layout: default
+title: Projects
+---
+
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">Projects</h1>
+        <p class="section-subtitle">
+            Cybersecurity tools, research projects, and practical implementations
+        </p>
+
+        <div class="grid grid-2">
+            {% for project in site.projects %}
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-{{ project.icon | default: 'project-diagram' }}"></i>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+
+                    {% if project.technologies %}
+                    <div class="project-tech">
+                        {% for tech in project.technologies %}
+                        <span class="tech-badge">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+                    <div class="project-links">
+                        <a href="{{ project.url | relative_url }}" class="btn btn-secondary">
+                            <i class="fas fa-info-circle"></i>
+                            Details
+                        </a>
+                        {% if project.github_url %}
+                        <a href="{{ project.github_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        {% endif %}
+                        {% if project.demo_url %}
+                        <a href="{{ project.demo_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            Demo
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if site.projects.size == 0 %}
+        <div class="card text-center">
+            <i class="fas fa-code" style="font-size: 4rem; color: var(--primary-color); margin-bottom: 1rem; opacity: 0.3;"></i>
+            <h3>Projects Coming Soon</h3>
+            <p style="color: var(--text-secondary);">
+                I'm currently working on documenting my projects. Check back soon!
+            </p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="section" style="background-color: var(--darker-bg);">
+    <div class="container text-center">
+        <h2 class="section-title">Have a Project Idea?</h2>
+        <p class="section-subtitle">
+            Let's collaborate on building secure and innovative solutions
+        </p>
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Get in Touch
+        </a>
+    </div>
+</section>

@@ -1,0 +1,189 @@
+---
+layout: default
+title: About Me
+---
+
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">About Me</h1>
+
+        <div class="grid grid-2" style="align-items: start;">
+            <div>
+                <h2>Who I Am</h2>
+                <p>
+                    I'm a passionate cybersecurity professional with expertise in penetration testing,
+                    vulnerability research, and secure software development. My journey in cybersecurity
+                    began with a curiosity about how systems work and evolved into a career dedicated
+                    to making the digital world more secure.
+                </p>
+                <p>
+                    With hands-on experience in web application security, network penetration testing,
+                    and security automation, I help organizations identify and remediate security
+                    vulnerabilities before they can be exploited by malicious actors.
+                </p>
+                <p>
+                    When I'm not hunting for vulnerabilities, you'll find me participating in CTF
+                    competitions, contributing to open-source security tools, or sharing knowledge
+                    through technical writeups and presentations.
+                </p>
+
+                <h2 style="margin-top: 2rem;">Technical Skills</h2>
+                <div class="grid grid-2">
+                    <div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Security Testing</h4>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>Web Application Pentesting</li>
+                            <li>Network Security Assessment</li>
+                            <li>Mobile Application Security</li>
+                            <li>API Security Testing</li>
+                            <li>Cloud Security (AWS, Azure)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Tools & Technologies</h4>
+                        <ul style="color: var(--text-secondary); line-height: 1.8;">
+                            <li>Burp Suite, OWASP ZAP</li>
+                            <li>Metasploit, Cobalt Strike</li>
+                            <li>Nmap, Wireshark, tcpdump</li>
+                            <li>Python, Bash, PowerShell</li>
+                            <li>Docker, Kubernetes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                    <h4 style="color: var(--accent-color); margin-bottom: 0.5rem;">Programming Languages</h4>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">Bash</span>
+                        <span class="tech-badge">PowerShell</span>
+                        <span class="tech-badge">Go</span>
+                        <span class="tech-badge">C/C++</span>
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">PHP</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">Quick Stats</h3>
+                <div style="text-align: center;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-trophy" style="font-size: 2rem; color: var(--primary-color);"></i>
+                        <h4 style="color: var(--text-primary); margin: 0.5rem 0;">50+</h4>
+                        <p style="color: var(--text-muted); margin: 0;">CTF Competitions</p>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-bug" style="font-size: 2rem; color: var(--primary-color);"></i>
+                        <h4 style="color: var(--text-primary); margin: 0.5rem 0;">100+</h4>
+                        <p style="color: var(--text-muted); margin: 0;">Vulnerabilities Found</p>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-code" style="font-size: 2rem; color: var(--primary-color);"></i>
+                        <h4 style="color: var(--text-primary); margin: 0.5rem 0;">25+</h4>
+                        <p style="color: var(--text-muted); margin: 0;">Security Tools Developed</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-blog" style="font-size: 2rem; color: var(--primary-color);"></i>
+                        <h4 style="color: var(--text-primary); margin: 0.5rem 0;">75+</h4>
+                        <p style="color: var(--text-muted); margin: 0;">Technical Writeups</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: var(--darker-bg);">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">
+            Industry-recognized certifications demonstrating expertise
+        </p>
+
+        <div class="cert-grid">
+            {% for cert in site.certifications %}
+            <div class="cert-badge">
+                <div class="cert-icon">
+                    <i class="{{ cert.icon }}"></i>
+                </div>
+                <div class="cert-name">{{ cert.name }}</div>
+                <div class="cert-issuer">{{ cert.issuer }}</div>
+                {% if cert.year %}
+                <div class="cert-issuer">{{ cert.year }}</div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 style="color: var(--primary-color);">Security Consultant</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <i class="far fa-building"></i> Freelance |
+                    <i class="far fa-calendar"></i> 2022 - Present
+                </p>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>Conducted comprehensive security assessments for web applications and infrastructure</li>
+                    <li>Performed penetration testing and vulnerability assessments for diverse clients</li>
+                    <li>Developed custom security tools and automation scripts</li>
+                    <li>Provided security training and awareness programs</li>
+                </ul>
+            </div>
+
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <h3 style="color: var(--primary-color);">Penetration Tester</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <i class="far fa-building"></i> Security Firm |
+                    <i class="far fa-calendar"></i> 2020 - 2022
+                </p>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>Executed network and application penetration tests following PTES methodology</li>
+                    <li>Identified critical vulnerabilities in enterprise environments</li>
+                    <li>Authored detailed technical reports with remediation recommendations</li>
+                    <li>Collaborated with development teams to implement security best practices</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3 style="color: var(--primary-color);">Security Analyst</h3>
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">
+                    <i class="far fa-building"></i> Tech Company |
+                    <i class="far fa-calendar"></i> 2018 - 2020
+                </p>
+                <ul style="color: var(--text-secondary); line-height: 1.8;">
+                    <li>Monitored security events and responded to incidents</li>
+                    <li>Performed vulnerability scanning and patch management</li>
+                    <li>Conducted security awareness training for employees</li>
+                    <li>Assisted in developing security policies and procedures</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: var(--darker-bg);">
+    <div class="container text-center">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">
+            Looking for a security professional to help secure your applications?
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">
+                <i class="fas fa-envelope"></i>
+                Contact Me
+            </a>
+            <a href="{{ '/projects' | relative_url }}" class="btn btn-secondary">
+                <i class="fas fa-code"></i>
+                View Projects
+            </a>
+        </div>
+    </div>
+</section>

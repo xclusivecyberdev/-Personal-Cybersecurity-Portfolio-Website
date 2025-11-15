@@ -1,0 +1,12 @@
+# Robots.txt for Cybersecurity Portfolio
+
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /.well-known/
+
+# Sitemap
+Sitemap: https://your-portfolio-site.github.io/sitemap.xml
+
+# Crawl delay to prevent aggressive crawling
+Crawl-delay: 1

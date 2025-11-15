@@ -1,0 +1,53 @@
+Contact: mailto:your.email@example.com
+Contact: https://github.com/your-username
+Expires: 2025-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://your-portfolio-site.github.io/.well-known/security.txt
+
+# Security Policy
+
+Thank you for helping keep this portfolio website secure!
+
+## Reporting a Vulnerability
+
+If you discover a security vulnerability, please report it via:
+
+- Email: your.email@example.com
+- GitHub: https://github.com/your-username
+
+Please do NOT create public GitHub issues for security vulnerabilities.
+
+## What to Include
+
+- Description of the vulnerability
+- Steps to reproduce
+- Potential impact
+- Suggested fix (if any)
+
+## Response Time
+
+- Initial response: Within 48 hours
+- Status updates: Every 5 business days
+- Resolution timeline: Depends on severity
+
+## Scope
+
+This security policy applies to:
+- The portfolio website and its components
+- Client-side JavaScript code
+- Contact form functionality
+- Any publicly accessible features
+
+Out of scope:
+- Third-party services and dependencies
+- Social engineering attacks
+- Physical security
+
+## Safe Harbor
+
+Security researchers who report vulnerabilities in good faith will not face legal action, provided they:
+- Make a good faith effort to avoid privacy violations and data destruction
+- Do not exploit the vulnerability beyond what is necessary for verification
+- Keep vulnerability details confidential until a fix is deployed
+
+Thank you for helping improve security!

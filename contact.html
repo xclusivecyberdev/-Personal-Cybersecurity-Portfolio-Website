@@ -1,0 +1,173 @@
+---
+layout: default
+title: Contact
+---
+
+<section class="section">
+    <div class="container">
+        <h1 class="section-title">Get in Touch</h1>
+        <p class="section-subtitle">
+            Have a question or want to work together? I'd love to hear from you!
+        </p>
+
+        <div class="grid grid-2" style="align-items: start;">
+            <div>
+                <h2>Contact Information</h2>
+                <div class="card">
+                    <div style="margin-bottom: 1.5rem;">
+                        <i class="fas fa-envelope" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                        <strong>Email:</strong>
+                        <a href="mailto:{{ site.email }}" style="display: block; margin-top: 0.5rem; margin-left: 1.5rem;">
+                            {{ site.email }}
+                        </a>
+                    </div>
+
+                    {% if site.github_username %}
+                    <div style="margin-bottom: 1.5rem;">
+                        <i class="fab fa-github" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                        <strong>GitHub:</strong>
+                        <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 0.5rem; margin-left: 1.5rem;">
+                            github.com/{{ site.github_username }}
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    {% if site.linkedin_username %}
+                    <div style="margin-bottom: 1.5rem;">
+                        <i class="fab fa-linkedin" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                        <strong>LinkedIn:</strong>
+                        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 0.5rem; margin-left: 1.5rem;">
+                            linkedin.com/in/{{ site.linkedin_username }}
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    {% if site.twitter_username %}
+                    <div>
+                        <i class="fab fa-twitter" style="color: var(--primary-color); margin-right: 0.5rem;"></i>
+                        <strong>Twitter:</strong>
+                        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" style="display: block; margin-top: 0.5rem; margin-left: 1.5rem;">
+                            @{{ site.twitter_username }}
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+
+                <h2 style="margin-top: 2rem;">Looking For</h2>
+                <div class="card">
+                    <ul style="color: var(--text-secondary); line-height: 1.8;">
+                        <li>Freelance security consulting opportunities</li>
+                        <li>Penetration testing projects</li>
+                        <li>Security research collaborations</li>
+                        <li>Speaking engagements and workshops</li>
+                        <li>Open source contributions</li>
+                        <li>CTF team collaborations</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h2>Send a Message</h2>
+                <form id="contact-form" class="contact-form">
+                    <!-- Honeypot field for bot detection -->
+                    <div class="honeypot">
+                        <label for="honeypot">Leave this field empty</label>
+                        <input type="text" id="honeypot" name="honeypot" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="form-label">
+                            Name <span style="color: var(--danger-color);">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="form-input"
+                            required
+                            maxlength="50"
+                            placeholder="Your Name"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            Email <span style="color: var(--danger-color);">*</span>
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-input"
+                            required
+                            maxlength="100"
+                            placeholder="your.email@example.com"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">
+                            Subject <span style="color: var(--danger-color);">*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            class="form-input"
+                            required
+                            maxlength="100"
+                            placeholder="What's this about?"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            Message <span style="color: var(--danger-color);">*</span>
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            class="form-textarea"
+                            required
+                            maxlength="1000"
+                            placeholder="Your message..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Send Message
+                    </button>
+
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: var(--text-muted); text-align: center;">
+                        <i class="fas fa-lock"></i>
+                        Your information is secure and will never be shared.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: var(--darker-bg);">
+    <div class="container">
+        <h2 class="section-title">Response Time</h2>
+        <div class="grid grid-3">
+            <div class="card text-center">
+                <i class="fas fa-clock" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                <h4>General Inquiries</h4>
+                <p style="color: var(--text-secondary);">24-48 hours</p>
+            </div>
+            <div class="card text-center">
+                <i class="fas fa-briefcase" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                <h4>Business Proposals</h4>
+                <p style="color: var(--text-secondary);">12-24 hours</p>
+            </div>
+            <div class="card text-center">
+                <i class="fas fa-bug" style="font-size: 2.5rem; color: var(--primary-color); margin-bottom: 1rem;"></i>
+                <h4>Security Issues</h4>
+                <p style="color: var(--text-secondary);">Immediate</p>
+            </div>
+        </div>
+    </div>
+</section>

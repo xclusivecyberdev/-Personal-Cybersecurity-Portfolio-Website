@@ -1,0 +1,170 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+    <div class="container">
+        <h1 class="hero-title">Cybersecurity Professional</h1>
+        <p class="hero-subtitle">
+            Penetration Tester | Security Researcher | CTF Enthusiast
+        </p>
+        <p class="hero-subtitle">
+            Securing the digital world, one vulnerability at a time.
+        </p>
+        <div class="hero-cta">
+            <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">
+                <i class="fas fa-code"></i>
+                View Projects
+            </a>
+            <a href="{{ '/blog' | relative_url }}" class="btn btn-secondary">
+                <i class="fas fa-blog"></i>
+                Read Blog
+            </a>
+            <a href="{{ '/contact' | relative_url }}" class="btn btn-secondary">
+                <i class="fas fa-envelope"></i>
+                Get in Touch
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="grid grid-3">
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <i class="fas fa-shield-halved" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Penetration Testing</h3>
+                <p>Comprehensive security assessments including web applications, networks, and infrastructure. Expertise in identifying and exploiting vulnerabilities following industry-standard methodologies.</p>
+            </div>
+
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <i class="fas fa-bug" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Vulnerability Research</h3>
+                <p>Active security researcher focused on discovering zero-day vulnerabilities, developing exploits, and contributing to responsible disclosure programs.</p>
+            </div>
+
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <i class="fas fa-terminal" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Security Automation</h3>
+                <p>Developing custom security tools and scripts to automate penetration testing workflows, vulnerability scanning, and threat detection.</p>
+            </div>
+
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <i class="fas fa-network-wired" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Network Security</h3>
+                <p>Deep understanding of network protocols, firewall configurations, intrusion detection systems, and secure network architecture design.</p>
+            </div>
+
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <i class="fas fa-code" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Secure Development</h3>
+                <p>Implementing security best practices in software development, conducting code reviews, and building applications with security-first mindset.</p>
+            </div>
+
+            <div class="card">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <i class="fas fa-trophy" style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>CTF Competitions</h3>
+                <p>Active participant in Capture The Flag competitions, demonstrating skills in cryptography, reverse engineering, forensics, and exploitation.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: var(--darker-bg);">
+    <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">
+            Explore my latest cybersecurity projects and tools
+        </p>
+        <div class="grid grid-2">
+            {% for project in site.projects limit:4 %}
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="project-info">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+                    {% if project.technologies %}
+                    <div class="project-tech">
+                        {% for tech in project.technologies limit:3 %}
+                        <span class="tech-badge">{{ tech }}</span>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                    <a href="{{ project.url | relative_url }}" class="btn btn-secondary">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ '/projects' | relative_url }}" class="btn btn-primary">
+                View All Projects
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Latest Blog Posts</h2>
+        <p class="section-subtitle">
+            Technical writeups, CTF solutions, and security insights
+        </p>
+        <div class="blog-grid">
+            {% for post in site.posts limit:3 %}
+            <article class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-file-alt" style="font-size: 3rem; color: var(--primary-color); opacity: 0.3;"></i>
+                </div>
+                <div class="blog-content">
+                    <h3 class="blog-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                    </h3>
+                    <div class="blog-meta">
+                        <span><i class="far fa-calendar"></i> {{ post.date | date: "%b %d, %Y" }}</span>
+                    </div>
+                    <p class="blog-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                    <a href="{{ post.url | relative_url }}" class="btn btn-secondary">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ '/blog' | relative_url }}" class="btn btn-primary">
+                View All Posts
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background-color: var(--darker-bg);">
+    <div class="container text-center">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-subtitle">
+            Interested in collaboration or have a security project in mind?
+        </p>
+        <a href="{{ '/contact' | relative_url }}" class="btn btn-primary">
+            <i class="fas fa-envelope"></i>
+            Contact Me
+        </a>
+    </div>
+</section>

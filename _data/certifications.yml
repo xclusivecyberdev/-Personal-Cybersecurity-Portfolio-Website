@@ -1,0 +1,35 @@
+- name: OSCP
+  full_name: Offensive Security Certified Professional
+  issuer: Offensive Security
+  icon: fas fa-shield-halved
+  year: 2023
+
+- name: CEH
+  full_name: Certified Ethical Hacker
+  issuer: EC-Council
+  icon: fas fa-user-secret
+  year: 2022
+
+- name: Security+
+  full_name: CompTIA Security+
+  issuer: CompTIA
+  icon: fas fa-certificate
+  year: 2021
+
+- name: CISSP
+  full_name: Certified Information Systems Security Professional
+  issuer: ISC2
+  icon: fas fa-lock
+  year: 2023
+
+- name: GPEN
+  full_name: GIAC Penetration Tester
+  issuer: GIAC
+  icon: fas fa-terminal
+  year: 2022
+
+- name: eWPT
+  full_name: eLearnSecurity Web Penetration Tester
+  issuer: eLearnSecurity
+  icon: fas fa-globe
+  year: 2021
